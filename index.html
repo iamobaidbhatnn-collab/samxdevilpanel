@@ -19705,140 +19705,181 @@ const _tgAdmins = [8765694454];
             })
         }
 
-                function CyberSamXDevilLogo({
-  size = 76,
-  id = "sxd",
-  className = ""
-}) {
-  const s = size || 76, pfx = id || "sxd";
-  return r.jsxs("svg", {
-    viewBox: "0 0 100 100",
-    width: s,
-    height: s,
-    className: `cyber-devil-logo-svg ${className}`,
-    children: [
-      r.jsxs("defs", {
-        children: [
-          r.jsxs("linearGradient", {
-            id: `${pfx}-bevel`,
-            x1: "0%", y1: "0%", x2: "100%", y2: "100%",
-            children: [
-              r.jsx("stop", { offset: "0%", stopColor: "#ff4466" }),
-              r.jsx("stop", { offset: "35%", stopColor: "#ff003c" }),
-              r.jsx("stop", { offset: "70%", stopColor: "#99001b" }),
-              r.jsx("stop", { offset: "100%", stopColor: "#3d000a" })
-            ]
-          }),
-          r.jsxs("radialGradient", {
-            id: `${pfx}-bg`,
-            cx: "50%", cy: "50%", r: "50%",
-            children: [
-              r.jsx("stop", { offset: "0%", stopColor: "#2c000a" }),
-              r.jsx("stop", { offset: "65%", stopColor: "#120104" }),
-              r.jsx("stop", { offset: "100%", stopColor: "#050002" })
-            ]
-          }),
-          r.jsxs("filter", {
-            id: `${pfx}-glow`,
-            x: "-50%", y: "-50%", width: "200%", height: "200%",
-            children: [
-              r.jsx("feGaussianBlur", { in: "SourceGraphic", stdDeviation: "1.8", result: "b1" }),
-              r.jsx("feGaussianBlur", { in: "SourceGraphic", stdDeviation: "4", result: "b2" }),
-              r.jsxs("feMerge", {
+                function CyberDevilLogo({
+            size = 76,
+            id = "cdl",
+            className = ""
+        }) {
+            const s = size || 76, pfx = id || "cdl";
+            return r.jsxs("svg", {
+                viewBox: "0 0 100 100",
+                width: s,
+                height: s,
+                className: `cyber-devil-logo-svg ${className}`,
                 children: [
-                  r.jsx("feMergeNode", { in: "b2" }),
-                  r.jsx("feMergeNode", { in: "b1" }),
-                  r.jsx("feMergeNode", { in: "SourceGraphic" })
+                    r.jsxs("defs", {
+                        children: [
+                            r.jsxs("linearGradient", {
+                                id: `${pfx}-bevel`,
+                                x1: "0%", y1: "0%", x2: "100%", y2: "100%",
+                                children: [
+                                    r.jsx("stop", { offset: "0%", stopColor: "#ff4466" }),
+                                    r.jsx("stop", { offset: "30%", stopColor: "#ff003c" }),
+                                    r.jsx("stop", { offset: "70%", stopColor: "#99001b" }),
+                                    r.jsx("stop", { offset: "100%", stopColor: "#3d000a" })
+                                ]
+                            }),
+                            r.jsxs("linearGradient", {
+                                id: `${pfx}-chrome`,
+                                x1: "0%", y1: "0%", x2: "0%", y2: "100%",
+                                children: [
+                                    r.jsx("stop", { offset: "0%", stopColor: "#ffffff" }),
+                                    r.jsx("stop", { offset: "45%", stopColor: "#ff3366" }),
+                                    r.jsx("stop", { offset: "100%", stopColor: "#ff003c" })
+                                ]
+                            }),
+                            r.jsxs("radialGradient", {
+                                id: `${pfx}-bg`,
+                                cx: "50%", cy: "50%", r: "50%",
+                                children: [
+                                    r.jsx("stop", { offset: "0%", stopColor: "#2a0009" }),
+                                    r.jsx("stop", { offset: "60%", stopColor: "#120104" }),
+                                    r.jsx("stop", { offset: "100%", stopColor: "#050002" })
+                                ]
+                            }),
+                            r.jsxs("filter", {
+                                id: `${pfx}-glow`,
+                                x: "-50%", y: "-50%", width: "200%", height: "200%",
+                                children: [
+                                    r.jsx("feGaussianBlur", { in: "SourceGraphic", stdDeviation: "1.8", result: "blur1" }),
+                                    r.jsx("feGaussianBlur", { in: "SourceGraphic", stdDeviation: "4.5", result: "blur2" }),
+                                    r.jsxs("feMerge", {
+                                        children: [
+                                            r.jsx("feMergeNode", { in: "blur2" }),
+                                            r.jsx("feMergeNode", { in: "blur1" }),
+                                            r.jsx("feMergeNode", { in: "SourceGraphic" })
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    r.jsx("circle", {
+                        className: "logo-reticle-cw",
+                        cx: 50, cy: 50, r: 48,
+                        fill: "none", stroke: "#ff003c", strokeWidth: 0.9,
+                        strokeDasharray: "14 8 2 8", opacity: 0.65
+                    }),
+                    r.jsx("circle", {
+                        className: "logo-reticle-ccw",
+                        cx: 50, cy: 50, r: 44,
+                        fill: "none", stroke: "#ff5500", strokeWidth: 0.6,
+                        strokeDasharray: "4 6 12 6", opacity: 0.55
+                    }),
+                    r.jsx("circle", {
+                        cx: 50, cy: 50, r: 40,
+                        fill: `url(#${pfx}-bg)`, stroke: "#ff003c", strokeWidth: 1.4
+                    }),
+                    r.jsxs("g", {
+                        className: "logo-reticle-cw",
+                        children: [
+                            r.jsx("circle", { cx: 50, cy: 2, r: 1.8, fill: "#00ffff" }),
+                            r.jsx("circle", { cx: 50, cy: 98, r: 1.8, fill: "#ff003c" }),
+                            r.jsx("circle", { cx: 2, cy: 50, r: 1.8, fill: "#ff003c" }),
+                            r.jsx("circle", { cx: 98, cy: 50, r: 1.8, fill: "#00ffff" })
+                        ]
+                    }),
+                    r.jsx("path", {
+                        d: "M 44 36 C 40 24 30 14 16 8 C 22 18 28 26 34 38 C 38 43 43 40 44 36 Z",
+                        fill: `url(#${pfx}-bevel)`, stroke: "#ff003c", strokeWidth: 0.8
+                    }),
+                    r.jsx("path", {
+                        d: "M 34 32 C 30 25 24 20 18 16 C 24 23 28 29 32 36 Z",
+                        fill: "#ffffff", opacity: 0.6
+                    }),
+                    r.jsx("polygon", {
+                        points: "26,38 18,30 24,42 32,44",
+                        fill: `url(#${pfx}-bevel)`, stroke: "#ff003c", strokeWidth: 0.6
+                    }),
+                    r.jsx("path", {
+                        d: "M 56 36 C 60 24 70 14 84 8 C 78 18 72 26 66 38 C 62 43 57 40 56 36 Z",
+                        fill: `url(#${pfx}-bevel)`, stroke: "#ff003c", strokeWidth: 0.8
+                    }),
+                    r.jsx("path", {
+                        d: "M 66 32 C 70 25 76 20 82 16 C 76 23 72 29 68 36 Z",
+                        fill: "#ffffff", opacity: 0.6
+                    }),
+                    r.jsx("polygon", {
+                        points: "74,38 82,30 76,42 68,44",
+                        fill: `url(#${pfx}-bevel)`, stroke: "#ff003c", strokeWidth: 0.6
+                    }),
+                    r.jsx("polygon", {
+                        points: "50,22 62,35 50,42 38,35",
+                        fill: "#240008", stroke: "#ff003c", strokeWidth: 1.2
+                    }),
+                    r.jsx("polygon", {
+                        points: "50,25 56,35 50,39 44,35",
+                        fill: `url(#${pfx}-bevel)`
+                    }),
+                    r.jsx("circle", {
+                        cx: 50, cy: 35, r: 2.2,
+                        fill: "#00ffff", filter: `url(#${pfx}-glow)`,
+                        className: "logo-core-pulse"
+                    }),
+                    r.jsx("polygon", {
+                        points: "31,44 44,48 41,52 29,48",
+                        fill: "#00ffff", filter: `url(#${pfx}-glow)`,
+                        className: "logo-core-pulse"
+                    }),
+                    r.jsx("polygon", {
+                        points: "69,44 56,48 59,52 71,48",
+                        fill: "#00ffff", filter: `url(#${pfx}-glow)`,
+                        className: "logo-core-pulse"
+                    }),
+                    r.jsx("polygon", {
+                        points: "28,52 38,55 35,66 24,60",
+                        fill: "#1f0208", stroke: "#ff003c", strokeWidth: 0.7
+                    }),
+                    r.jsx("polygon", {
+                        points: "72,52 62,55 65,66 76,60",
+                        fill: "#1f0208", stroke: "#ff003c", strokeWidth: 0.7
+                    }),
+                    r.jsx("g", {
+                        filter: `url(#${pfx}-glow)`,
+                        children: r.jsx("path", {
+                            d: "M 64 56 L 43 56 L 37 62 L 56 65 L 56 73 L 38 73 L 36 78 L 63 78 L 65 70 L 45 67 L 45 62 L 64 62 Z",
+                            fill: `url(#${pfx}-chrome)`, stroke: "#ffffff", strokeWidth: 0.5
+                        })
+                    }),
+                    r.jsx("polygon", {
+                        points: "50,86 44,77 50,80 56,77",
+                        fill: `url(#${pfx}-bevel)`, stroke: "#ff003c", strokeWidth: 0.8
+                    }),
+                    r.jsx("polygon", {
+                        points: "41,75 36,83 44,80",
+                        fill: "#ff003c", opacity: 0.85
+                    }),
+                    r.jsx("polygon", {
+                        points: "59,75 64,83 56,80",
+                        fill: "#ff003c", opacity: 0.85
+                    }),
+                    r.jsx("path", {
+                        d: "M 22 52 L 16 52 L 12 56",
+                        stroke: "rgba(255, 0, 60, 0.75)", strokeWidth: 0.8, fill: "none"
+                    }),
+                    r.jsx("circle", { cx: 12, cy: 56, r: 1.2, fill: "#ff003c" }),
+                    r.jsx("path", {
+                        d: "M 78 52 L 84 52 L 88 56",
+                        stroke: "rgba(255, 0, 60, 0.75)", strokeWidth: 0.8, fill: "none"
+                    }),
+                    r.jsx("circle", { cx: 88, cy: 56, r: 1.2, fill: "#ff003c" })
                 ]
-              })
-            ]
-          })
-        ]
-      }),
-      r.jsx("circle", {
-        className: "logo-reticle-cw",
-        cx: 50, cy: 50, r: 48,
-        fill: "none", stroke: "#ff003c", strokeWidth: 0.9,
-        strokeDasharray: "14 8 2 8", opacity: 0.65
-      }),
-      r.jsx("circle", {
-        className: "logo-reticle-ccw",
-        cx: 50, cy: 50, r: 44,
-        fill: "none", stroke: "#00ffff", strokeWidth: 0.7,
-        strokeDasharray: "4 6 12 6", opacity: 0.6
-      }),
-      r.jsx("circle", {
-        cx: 50, cy: 50, r: 40,
-        fill: `url(#${pfx}-bg)`, stroke: "#ff003c", strokeWidth: 1.4
-      }),
-      r.jsxs("g", {
-        className: "logo-reticle-cw",
-        children: [
-          r.jsx("circle", { cx: 50, cy: 2, r: 2, fill: "#00ffff", filter: `url(#${pfx}-glow)` }),
-          r.jsx("circle", { cx: 50, cy: 98, r: 2, fill: "#ff003c", filter: `url(#${pfx}-glow)` }),
-          r.jsx("circle", { cx: 2, cy: 50, r: 2, fill: "#ff003c" }),
-          r.jsx("circle", { cx: 98, cy: 50, r: 2, fill: "#00ffff" })
-        ]
-      }),
-      r.jsx("path", {
-        d: "M 32 17 L 68 17 L 63 30 L 37 30 Z",
-        fill: "#180106", stroke: "#ff003c", strokeWidth: 0.9
-      }),
-      r.jsx("path", {
-        d: "M 35 19 L 65 19",
-        stroke: "#00ffff", strokeWidth: 0.8, opacity: 0.7
-      }),
-      r.jsx("text", {
-        x: 50, y: 27, textAnchor: "middle", fill: "#ffffff",
-        fontSize: 8, fontWeight: 900,
-        fontFamily: "'Outfit', 'Segoe UI', sans-serif",
-        letterSpacing: 2.5, filter: `url(#${pfx}-glow)`,
-        children: "SAM"
-      }),
-      r.jsxs("g", {
-        children: [
-          r.jsx("polygon", { points: "26,35 34,33 74,73 66,75", fill: `url(#${pfx}-bevel)` }),
-          r.jsx("polygon", { points: "74,35 66,33 26,73 34,75", fill: `url(#${pfx}-bevel)` }),
-          r.jsx("polygon", { points: "28,36 48,51 44,55 25,39", fill: "#ff6688", opacity: 0.8 }),
-          r.jsx("polygon", { points: "72,36 52,51 56,55 75,39", fill: "#ff003c", opacity: 0.9 }),
-          r.jsx("polygon", { points: "28,72 48,57 44,53 25,69", fill: "#ff003c", opacity: 0.9 }),
-          r.jsx("polygon", { points: "72,72 52,57 56,53 75,69", fill: "#ff6688", opacity: 0.8 }),
-          r.jsx("line", { x1: 26, y1: 35, x2: 74, y2: 73, stroke: "#00ffff", strokeWidth: 0.9, opacity: 0.7 }),
-          r.jsx("line", { x1: 74, y1: 35, x2: 26, y2: 73, stroke: "#ffffff", strokeWidth: 0.9, opacity: 0.7 })
-        ]
-      }),
-      r.jsx("polygon", {
-        className: "logo-core-pulse",
-        points: "50,47 56,53 50,59 44,53",
-        fill: "#00ffff", filter: `url(#${pfx}-glow)`
-      }),
-      r.jsx("circle", { cx: 50, cy: 53, r: 1.5, fill: "#ffffff" }),
-      r.jsx("path", {
-        d: "M 30 76 L 70 76 L 65 89 L 50 91 L 35 89 Z",
-        fill: "#180106", stroke: "#ff003c", strokeWidth: 0.9
-      }),
-      r.jsx("path", {
-        d: "M 36 88 L 50 90 L 64 88",
-        stroke: "#ff003c", strokeWidth: 0.7, opacity: 0.7
-      }),
-      r.jsx("text", {
-        x: 50, y: 85, textAnchor: "middle", fill: "#ff3366",
-        fontSize: 7.5, fontWeight: 900,
-        fontFamily: "'Outfit', 'Segoe UI', sans-serif",
-        letterSpacing: 2, filter: `url(#${pfx}-glow)`,
-        children: "DEVIL"
-      }),
-      r.jsx("path", { d: "M 18 35 L 15 35 L 15 38", fill: "none", stroke: "#00ffff", strokeWidth: 1.2 }),
-      r.jsx("path", { d: "M 82 35 L 85 35 L 85 38", fill: "none", stroke: "#00ffff", strokeWidth: 1.2 }),
-      r.jsx("path", { d: "M 18 70 L 15 70 L 15 67", fill: "none", stroke: "#ff003c", strokeWidth: 1.2 }),
-      r.jsx("path", { d: "M 82 70 L 85 70 L 85 67", fill: "none", stroke: "#ff003c", strokeWidth: 1.2 })
-    ]
-  });
-}
-const CyberDevilLogo = CyberSamXDevilLogo;
-const CyberSkullLogo = CyberSamXDevilLogo;
+            });
+        }
+const CyberSkullLogo = CyberDevilLogo;
+const CyberSamXDevilLogo = CyberDevilLogo;
 
-        function s1({
+function s1({
             onConnect: A,
             onConnectAll: onAll
         }) {
