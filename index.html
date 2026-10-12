@@ -5598,6 +5598,25 @@ div[class*="shadow-2xl"][class*="border-l"] {
     margin-top: 8px !important;
     word-break: break-word !important;
 }
+
+/* ========================================================
+   CYBER-ARMOR SECURITY SHIELD - ANTI-INSPECT & TAMPER
+   ======================================================== */
+body, html {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+}
+
+input, textarea {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}
+
 </style>
 </head>
 
@@ -5633,6 +5652,87 @@ div[class*="shadow-2xl"][class*="border-l"] {
             </div>
         </div>
     </div>
+        <!-- ========================================================
+         CYBER-ARMOR SECURITY & ANTI-INSPECT PROTECTION SHIELD
+         ======================================================== -->
+    <script>
+        (function() {
+            'use strict';
+            
+            // 1. Iframe Clickjacking Protection
+            try {
+                if (window.top !== window.self) {
+                    window.top.location = window.self.location;
+                }
+            } catch (err) {}
+
+            // 2. Disable Right-Click Context Menu
+            window.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }, true);
+
+            // 3. Block Developer Tools & Source Inspection Keyboard Shortcuts
+            window.addEventListener('keydown', function(e) {
+                const k = e.key ? e.key.toLowerCase() : '';
+                const code = e.keyCode || e.which;
+                const ctrl = e.ctrlKey || e.metaKey;
+                const shift = e.shiftKey;
+                
+                // F12 (DevTools)
+                if (code === 123 || k === 'f12') {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+                
+                // Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Inspect Element)
+                // Ctrl+Shift+K (Firefox), Ctrl+Shift+E (Network)
+                if (ctrl && shift && (k === 'i' || k === 'j' || k === 'c' || k === 'k' || k === 'e' || code === 73 || code === 74 || code === 67 || code === 75 || code === 69)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+                
+                // Ctrl+U (View Source), Ctrl+S (Save Page), Ctrl+P (Print Dump)
+                if (ctrl && (k === 'u' || k === 's' || k === 'p' || code === 85 || code === 83 || code === 80)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            }, true);
+
+            // 4. Disable Dragging of Assets / Code
+            window.addEventListener('dragstart', function(e) {
+                if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+                e.preventDefault();
+            }, true);
+
+            // 5. Neutralize Console Leakage & Data Extraction
+            try {
+                const noop = function() {};
+                ['log', 'debug', 'info', 'warn', 'error', 'table', 'dir', 'dirxml', 'trace'].forEach(function(m) {
+                    if (window.console && window.console[m]) {
+                        window.console[m] = noop;
+                    }
+                });
+                setInterval(function() {
+                    try { if (window.console && window.console.clear) window.console.clear(); } catch(err) {}
+                }, 1500);
+            } catch (err) {}
+
+            // 6. Anti-Debugger Protection Loop
+            setInterval(function() {
+                const start = performance.now();
+                (function() {}['constructor']('debugger')());
+                if (performance.now() - start > 150) {
+                    try { if (window.console && window.console.clear) window.console.clear(); } catch(err) {}
+                }
+            }, 1200);
+        })();
+    </script>
+
     <script>
         function closeTelegramModal(e) {
             if (e) {
